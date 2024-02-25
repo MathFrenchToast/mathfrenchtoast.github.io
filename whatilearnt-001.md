@@ -1,30 +1,6 @@
+# this month findings - Jan 2024
+
 A logbook on small findings techwise
-====================================
-
----
-# reset a WSL distro
-
-in Powershell
-
-```
-wsl --list  
-wsl --unregister DISTRO-NAME
-```
-
-This will remove the virtual filesystem.
-
-you can check with `wsl --list` that the distro is no longer there
-Then you can on the Windows store, relaucnh it without re-downloading it
-
-
-BTW, you can (should ?) make a backup of your vm first ((doc)[https://learn.microsoft.com/en-us/windows/wsl/basic-commands#import-and-export-a-distribution]) just in case
-```
-wsl --shutdown
-wsl --export <Distribution Name> <FileName>
-```
-
-you'll be able to restore it with: `wsl --import <Distribution Name> <InstallLocation> <FileName>`  
-where `<InstallLocation>` enable yout to define where it will be installed instead of the default: %localappdata%\Packages
 
 ----
 
