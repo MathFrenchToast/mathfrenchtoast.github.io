@@ -39,7 +39,7 @@ You can use it for video extraction also (remove the `-x --audio-format mp3` fro
 I encapsulated it in a docker image for a convenient usage
 ```
   docker build -t ytdl:latest -f .\ytdl.dockerfile .
-  docker run --rm -v .:/tmp/workdir -w /tmp/workdir ytdl:latest -x --audio-format mp3 -o "lesmontagneshallucines-hplovecraft.mp3" "https://www.youtube.com/watch?v=Kt0ag4D6P4A"'
+  docker run --rm -v .:/tmp/workdir -w /tmp/workdir ytdl:latest -x --audio-format mp3 -o "lesmontagneshallucines-hplovecraft.mp3" "https://www.youtube.com/watch?v=Kt0ag4D6P4A"
 ```
 
 Note: I use a lot a docker image to have a consistent behavior and to not mess up my envrionment. To do so, I use the options:
