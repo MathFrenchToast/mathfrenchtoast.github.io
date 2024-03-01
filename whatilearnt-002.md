@@ -41,3 +41,20 @@ the first one is how much capacity was publicitize by the manufacturer and the s
 when brand new, your battery capacity is not far from the 'design capacity' but with time and cycles, real capacity lowers, and your laptop unplugged last less and less.
 
 The ratio (FULL CHARGE CAPACITY / DESIGN CAPACITY) is your current battery score.
+
+## Mysql - safe select on an in-production database
+
+How to run a non blocking and safe select request in a MySQL 5.7+.
+
+First set the transaction isolation to dirty read  
+then execute your select with a timeout (in millisecond).
+
+```
+SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+SELECT
+ /*+ MAX_EXECUTION_TIME(30000) */ 
+<<fields>> FROM <<table(s)>>;
+```
+
+You can set this globally in your mycnf with `max_execution_time=x' or on the current run of the server with: 
+`SET GLOBAL MAX_EXECUTION_TIME=x;`
