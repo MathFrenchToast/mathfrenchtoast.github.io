@@ -1,19 +1,19 @@
 # manage mutiple WSL images of the same distro
 
 
-We will create a minimal installation and defined a user  
+We will create a minimal installation and define a user.  
 create a based image,  
 and then create 2 deriveds image (Work and Home).  
 
 I assume you already have wsl 2 installed (if not follow the step [here](https://learn.microsoft.com/en-us/windows/wsl/install)).  
 
-I'll use ubuntu 22
+I'll use ubuntu 22.  
 if you already have this distro I advice to create an export of your current distro then unregister it.
 
 In the  windows store [go to the ubuntu22](https://www.microsoft.com/store/productId/9PN20MSR04DW?ocid=pdpshare)
-download and run
-at prompt define your username and password.
-then perform a first update/upgrade abd exit
+download and run the installer.  
+at prompt define your username and password.  
+then perform a first update/upgrade and exit
 
 ```bash
 # download and install last system update
@@ -24,7 +24,7 @@ exit
 ```
 
 Our base image is ready, we will now export it.
-I propose a directory layout under c:\WSL, but you can change the path if you want
+I propose a directory layout under c:\WSL, but you can change the path if you want.  
 In a powershell window:
 
 
