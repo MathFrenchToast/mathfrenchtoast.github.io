@@ -51,7 +51,7 @@ az lock create --name ${TF_RESOURCE_GROUP_NAME}DoNotDelete --resource-group $TF_
 ```
 
 ## Create blob container
-az storage container create --name $TF_CONTAINER_NAME --account-name $TF_STORAGE_ACCOUNT_NAME
+`az storage container create --name $TF_CONTAINER_NAME --account-name $TF_STORAGE_ACCOUNT_NAME`
 
 
 ## store the STORAGE KEY
