@@ -12,7 +12,7 @@ if you already have this distro I advice to create an export of your current dis
 
 In the  windows store [go to the ubuntu22](https://www.microsoft.com/store/productId/9PN20MSR04DW?ocid=pdpshare)
 download and run the installer.  
-at prompt define your username and password.  
+at prompt define your username and password.  (mine here is 'mathieu')
 then perform a first update/upgrade and exit
 
 ```bash
@@ -20,8 +20,12 @@ then perform a first update/upgrade and exit
 sudo apt update -y && sudo apt -y upgrade
 # add this line to the profile to be in your home dir at startup 
 echo "cd" >> .profile
+# force default user
+echo -e "[user]\ndefault=$USER" | sudo tee -a /etc/wsl.conf
 exit
 ```
+
+note: the wsl.conf update at the end is needed, or your default user will be root even if started with another user as parameter (ref to issue)[https://github.com/microsoft/WSL/issues/9684].
 
 Our base image is ready, we will now export it.
 I propose a directory layout under c:\WSL, but you can change the path if you want.  
@@ -51,7 +55,7 @@ wsl --import HomeUbuntu22 "c:\WSL\instances\HomeUbuntu22" "c:\WSL\img\DefaultUbu
 wsl --list
 ```
 
-That it to run one or the other just use (change the username with the one choose above:
+That it to run one or the other just use (change the username with the one choosen above) :
 `wsl --distribution WorkUbuntu22 --user mathieu` 
 or   
 `wsl --distribution HomeUbuntu22 --user mathieu`
