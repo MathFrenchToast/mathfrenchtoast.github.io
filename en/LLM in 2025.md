@@ -17,7 +17,7 @@ As this is comparable to a human "system 2" conscious reasoning, that is weighin
 ## Anatomy of a Simulated Reasoning Model
 Various techniques have been proposed, and even if some are yet undisclosed (we still have no information on OpenAI o1 and o3 structure or training), we can say that they are based on a pipeline where the LLM is only one building block.
 
-![anatomy of sr model](file to be included)
+![anatomy of sr model]([file to be included](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*6ACnFo5y76SC-V867LqWvQ.png))
 Schema from: [Hugging Face paper](https://huggingface.co/spaces/HuggingFaceH4/blogpost-scaling-test-time-compute).
 
 What is noticeable is that the LLM is now only a sub-component of the "problem-to-answer" pipeline, along with the 'Search Strategy' and the 'PRM'. The PRM in the model stands for: Process Reward Model, it is the brick that will score the candidate answer.
